@@ -1,4 +1,4 @@
-body {
+ body {
     font-family: 'Roboto', sans-serif;
     background-color: #FFF;
     color: #434455;
@@ -201,8 +201,8 @@ address {
 
 
 .skills-section {
-    padding-top: 120px;
-    padding-bottom: 120px;
+    padding-top: 96px;
+    padding-bottom: 96px;
 }
 
 .visually-hidden {
@@ -221,35 +221,38 @@ address {
 
 .skills-list {
     display: flex;
-    gap: 24px;
+    gap: 72px;
+    flex-wrap: wrap; 
 }
 
 .skill-item {
-    width: calc((100% - 24px * 3) / 4);
+    width: 100%;
 }
 
 .skills-icon-container {
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
     height: 112px;
     background-color: #f4f4fd;
     border-radius: 4px;
     margin-bottom: 8px;
-    border: 1px solid #8E8F99;
+    border: 1px solid #0a0b14;
 }
 
 .skill-name {
     color: #2E2F42;
-    font-size: 20px;
-    font-weight: 500;
-    line-height: 1.20;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.11;
     letter-spacing: 0.02em;
     margin-bottom: 8px;
+    text-align: center ;
 }
 
 .skill-description {
     color: #434455;
+    font-weight: 500;
     line-height: 1.50;
     letter-spacing: 0.02em;
 }
@@ -258,8 +261,8 @@ address {
 
 .team-section {
     background-color: #F4F4FD;
-    padding-top: 120px;
-    padding-bottom: 120px;
+    padding-top: 96px;
+    padding-bottom: 96px;
 }
 
 .team-member {
@@ -271,8 +274,6 @@ address {
 .team-member-list {
     padding: 32px 0 32px;
 }
-
-
 
 .team-title {
     color: #2E2F42;
@@ -287,11 +288,13 @@ address {
 
 .team-list {
     display: flex;
-    gap: 24px;
+    gap: 72px;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .team-member {
-    width: calc((100% 24px * 3) / 4);
+    max-width: 264;
 }
 
 .team-member-name {
@@ -311,7 +314,6 @@ address {
     letter-spacing: 0.02em;
     margin-bottom: 8px;
 }
-
 
 .icon-list {
     display: flex;
@@ -346,13 +348,19 @@ address {
 
 /* Portfolio Section */
 
+.portfolio-list {
+    flex-wrap: wrap;
+    display: flex;
+    gap: 72px;
+}
+
 .portfolio-section {
-    padding-top: 120px;
-    padding-bottom: 120px;
+    padding-top: 96px;
+    padding-bottom: 96px;
 }
 
 .portfolio-item {
-    width: calc((100% - 48px) / 3);
+    max-width: 264px;
     transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -401,13 +409,6 @@ address {
     border: 1px solid #e7e9fc;
     border-top: none;
 
-}
-
-.portfolio-list {
-    flex-wrap: wrap;
-    display: flex;
-    column-gap: 24px;
-    row-gap: 48px;
 }
 
 .portfolio-name {
@@ -639,7 +640,7 @@ address {
 }
 
 .close-button-svg {
-    fill: #2E2F42;
+    fill:#2E2F42;
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -726,7 +727,7 @@ address {
     line-height: 1.17;
     letter-spacing: 0.04em;
     color: rgba(46, 47, 66, 0.4);
-    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);   
 }
 
 .modal-textarea:focus {
@@ -771,10 +772,10 @@ address {
     border: 1px solid rgba(46, 47, 66, 0.40);
     fill: transparent;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
+    
 }
 
-.input-check:checked+.check-text>.check-text-box {
+.input-check:checked + .check-text > .check-text-box {
     background-color: #404bbf;
     border: none;
     fill: #F4F4FD;
@@ -802,4 +803,132 @@ address {
 
 span {
     display: inline-flex;
+}
+
+/* MEDIA */
+
+/* HEADER */
+
+@media screen and (min-width:320px) {
+
+    .container {
+        max-width: 318px;
+    }
+
+            /* MAIN */
+    
+        /* skill section */
+
+        /* team section */
+
+        /* portfolio section */
+
+
+        
+
+
+}
+
+@media screen and (min-width:768px) {
+
+    .container {
+        max-width: 766px;
+    }
+    
+        /* skill section */
+
+    .skills-list {
+        gap: 72px 24px;
+    }
+
+    .skill-item {
+        width: calc((100% - 24px) / 2)
+    }  
+
+    .skill-name {
+        text-align: start;
+    }
+
+        /* team section */
+
+    .team-list {
+        gap: 64px 24px;
+    }
+
+        /* portfolio section */
+
+    .portfolio-item {
+        width: calc((100% - 24px) / 2)
+    }
+
+    .portfolio-list {
+        justify-content: center;
+        gap: 72px 24px;
+    }
+
+}
+
+@media screen and (min-width:1440px){
+    
+    .container {
+        max-width: 1158px;
+    }
+
+        /* skill section */
+
+    .skills-section {
+        padding-top: 120px;
+        padding-bottom: 120px;
+    }
+
+    .skill-item {
+        width: calc((100% - 72px) / 4);
+    }
+
+    .skills-icon-container {
+        display: flex;
+    }
+
+    .skill-name {
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 1.20;
+        letter-spacing: 0.02em;
+    }
+
+    .skill-description {
+        font-weight: 400px;
+    }
+
+        /* team section */
+
+    .team-section {
+        padding-top: 120px;
+        padding-bottom: 120px;
+    }
+
+    .team-member {
+        width: calc((100% 24px * 3) / 4);
+    }
+
+        /* portfolio section */
+
+    .portfolio-section {
+        padding-top: 120px;
+        padding-bottom: 120px;
+    }
+
+    .portfolio-item {
+        max-width: 360px;
+    }
+
+    .portfolio-item {
+        width: calc((100% - 48px) / 3);
+    }
+
+    .portfolio-list {
+        justify-content: start;
+        gap: 48px 24px;
+    }
+
 }
